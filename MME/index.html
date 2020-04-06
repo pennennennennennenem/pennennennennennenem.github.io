@@ -41,18 +41,23 @@
   </tr>
 </table>
 
-<p>
-  初公開：2020-0405
-</p>
-<p>
-  sdPはそぼろ様作<a href="https://www.nicovideo.jp/watch/sm17288931">WorldSnow</a>を元に作成した「のびるパーティクルを撃てるエンジン」です。それを元に3つのエフェクトを作りました。
-</p>
-<p>
-  また、IoriKotatsu様による<a href="https://bowlroll.net/file/211554">scale.fx対応ray-mmd</a>(ray-mmdの原作者はRui様、scale.fxの原作者は針金P様)が対応している「連続面毎に分解エフェクト」(原作者はわたり様)に対して煙と光を付けるエフェクトも同時配布となりました。
-</p>
+<div class="hidden_div">
+  <input type="checkbox" id="check1"><label>詳細を表示する</label></input>
+  <div class="hidden_before">
+     <p>
+      初公開：2020-0405
+    </p>
+    <p>
+      sdPはそぼろ様作<a href="https://www.nicovideo.jp/watch/sm17288931">WorldSnow</a>を元に作成した「のびるパーティクルを撃てるエンジン」です。それを元に3つのエフェクトを作りました。
+    </p>
+    <p>
+      また、IoriKotatsu様による<a href="https://bowlroll.net/file/211554">scale.fx対応ray-mmd</a>(ray-mmdの原作者はRui様、scale.fxの原作者は針金P様)が対応している「連続面毎に分解エフェクト」(原作者はわたり様)に対して煙と光を付けるエフェクトも同時配布となりました。
+    </p>
+  </div>
+</div>
 
 
-<br><br>
+<br>
 
 
 <h2>
@@ -73,11 +78,27 @@
     <td>sdMengerDonut<br><font class="d">いっぱい穴の開いたドーナツを描きます</font></td>
   </tr>
 </table>
-<p>
-  初公開：2020-0315
-</p>
 
-<br><br>
+<div class="hidden_div">
+  <input type="checkbox" id="check1"><label>詳細を表示する</label></input>
+  <div class="hidden_before">
+     <p>
+       初公開：2020-0315
+    </p>
+    <p>
+      レイトレーシング・レイマーチングの技法を用いて実装されたMMEです。
+    </p>
+    <p>
+      読み込みに時間が掛かる・重い・ノイズが乗るなど欠点も多いですがポリゴンでは表現しきれないほど緻密な描写も出来まして、この作品はその例です。
+sdMengerDonutは、この例ではなんのこっちゃという感じですが、拡大しても緻密な構造が描かれるため、100倍程度に拡大して内部を探検できます。
+    </p>
+    <p>
+      sdRayCube,sdMengerDonutは、そぼろ様作のいつもお世話になっているMikuMikuTelopと連携して表面に歌詞を入れることができます。
+    </p>
+  </div>
+</div>
+
+<br>
 
 <h2>
   <a href="https://github.com/pennennennennennenem/sdCellularAutomata/releases">うごくMMEセルオートマトン編</a>
@@ -97,19 +118,31 @@
     <td>sdFluid2D<br><font class="d">2D流体シミュレータです</font></td>
   </tr>
 </table>
-<p>
-  初公開：2020-0220
-</p>
-<p>
-  <table cellpadding=4>
-    <tr colspan=3><td>sdMoldの画像にてお借りしたもの</td></tr>
-    <tr><td align=right>3DModel<td>天龍改二<td>(｀・ω・)様
-    <tr><td align=right>BG<td>清水風<td>ムムム様
-  </table>
-</p>
+<div class="hidden_div">
+  <input type="checkbox" id="check1"><label>詳細を表示する</label></input>
+  <div class="hidden_before">
+  <p>
+    初公開：2020-0220
+  </p>
+  <p>
+    <table cellpadding=4>
+      <tr colspan=3><td>sdMoldの画像にてお借りしたもの</td></tr>
+      <tr><td align=right>3DModel<td>天龍改二<td>(｀・ω・)様
+      <tr><td align=right>BG<td>清水風<td>ムムム様
+    </table>
+  </p>
+  <p>
+    セルオートマトンで実装された2Dエフェクト集です。
+セルオートマトンという事は前のフレームの情報が次のフレームの出力に必要であり、MMDから静止画で出力すると意図した結果が得られないという事です。
+2Dという事はカメラを動かすと描画が破綻するという事です。
+  </p>
+  <p>
+    そんな欠点もありますがsdMold,sdFluid2Dなど独特の表現が可能です。公開時はご好評頂いてとても嬉しかったです。
+  </p>
+  </div>
+</div>
 
-<br><br>
-
+<br>
 
 <h2>
   <a href="https://github.com/pennennennennennenem/sdTransition/releases">遷移MME集</a>
@@ -135,12 +168,22 @@
     <td>sdNTSC<br><font class="d">解像度を縮退し、シャドウマスク風の滲みを加えます</font></td>
   </tr>
 </table>
-<p>
-  初公開：2020-0206
-</p>
+<div class="hidden_div">
+  <input type="checkbox" id="check1"><label>詳細を表示する</label></input>
+  <div class="hidden_before">
+  <p>
+    初公開：2020-0206
+  </p>
+  <p>
+    使い勝手のいいMMEを作ろうと思い、動画編集ソフトを使わなくてもMMD上でカット割りの補助をするエフェクト集を作りました。思った通り、2020年4月時点では最も子作品が登録されるペースが早く、作った甲斐がありました。
+  </p>
+  <p>
+    自分ではsdSimpleFadeをよく使っています。とりあえずフェードアウト・インしたい時に黒や白1色に向けて画面を隠すことができます。
+  </p>
+  </div>
+</div>
 
-<br><br>
-
+<br>
 
 <h2>
   <a href="https://github.com/pennennennennennenem/sdBGHorizon/releases">うごく背景MME -ホライゾン編-</a>
@@ -160,10 +203,13 @@
     <td>sdBGGoddoKuraudo<br><font class="d">雲付きゴッドレイを描きます</font></td></td>
   </tr>
 </table>
-<p>
-  初公開：2020-0117
-</p>
-<p>
+
+<div class="hidden_div">
+  <input type="checkbox" id="check1"><label>詳細を表示する</label></input>
+  <div class="hidden_before">
+  <p>
+    初公開：2020-0117
+  </p>
   <table cellpadding=4>
     <tr colspan=3><td>お借りしたもの</td></tr>
     <tr><td align=right>3DModel<td>天龍改二<td>(｀・ω・)様
@@ -171,9 +217,17 @@
 　  <tr><td align=right>BG<td>千本鳥居風ステージ<td>torisutsuki様
 　  <tr><td align=right>Motion<td>ノリノリダンス<td>Plover様
   </table>
-</p>
+  <p>
+    固定長レイマーチングを用いて水平面と水平または垂直に物体を描画する、うごく背景MMEです。
+  </p>
+  <p>
+    どれも見た目が濃いせいがあまり活用してもらえてません。sdGoddoKuraudoはせめてモデルによって遮蔽される効果でもあればもっとキャッチーなエフェクトに化けそうなんですが。
+  </p>
+  </div>
+</div>
 
-<br><br>
+
+<br>
 
 
 <h2>
@@ -207,10 +261,13 @@
 
   </tr>
 </table>
-<p>
-  初公開：2020-0101
-</p>
-<p>
+
+<div class="hidden_div">
+  <input type="checkbox" id="check1"><label>詳細を表示する</label></input>
+  <div class="hidden_before">
+  <p>
+    初公開：2020-0101
+  </p>
   <table cellpadding=4>
     <tr colspan=3><td>お借りしたもの</td></tr>
     <tr><td align=right>3DModel<td>天龍改二<td>(｀・ω・)様
@@ -218,9 +275,17 @@
 　  <tr><td align=right>Motion<td>ハイファイレイヴァー<td>アガちん様
 　  <tr><td align=right> <td>ポッキーダンス<td>まったり様、黒鬼様
   </table>
-</p>
+  <p>
+    お正月に合わせて書いた、うごく背景MME集です。子年という事で、増えまくるのは丁度いいんじゃないでしょうか？
+  </p>
+  <p>
+    前景(一定の距離より前に描かれている内容)を増殖させた内容を背景として貼り付けるという挙動をします。
+  </p>
+  </div>
+</div>
 
-<br><br>
+
+<br>
 
 
 <h2>
@@ -248,18 +313,35 @@
 
   </tr>
 </table>
-<p>
-  初公開：2019-1218
-</p>
-<p>
+<div class="hidden_div">
+  <input type="checkbox" id="check1"><label>詳細を表示する</label></input>
+  <div class="hidden_before">
+  <p>
+    初公開：2019-1218
+  </p>
   <table cellpadding=4>
     <tr colspan=3><td>お借りしたもの</td></tr>
     <tr><td align=right>3DModel<td>天龍改二<td>(｀・ω・)様
 　  <tr><td align=right>Motion<td>GravityRain<td>reno様
   </table>
-</p>
+  <p>
+    記念すべき、初の作例動画付きのMME集です。
+  </p>
+  <p>
+    MMDを触れるきっかけになったScutellariaモーションを作られたreno氏の作である、GravityRainダンスモーションをお借りして、これまたMMDを触れるきっかけである(｀・ω・)氏の天龍ちゃんで作例動画を頑張って作りました。
+  </p>
+  <p>
+    ポストエフェクトで後から背景を描くというのは無茶すぎる挙動であり、あまり以前に例がないと思うのですが、
+これは四次元殺法コンビが「良い子の諸君！」と宣言しはじめてもおかしくないレベルの王道を踏み外した安直なやり方だと自覚しております。
+  </p>
+  <p>
+    しかし、ray-mmdなどの統合型シェーダと「何か動くエフェクト」との安易な同居を目指すとなるとこれしか僕には思いつかなかったのでした。
+  </p>
+  </div>
+</div>
 
-<br><br>
+
+<br>
 
 
 <h2>
@@ -274,16 +356,31 @@
     <td>sdHaku<br><font class="d">あなたのMMDに箔を付けます</font></td>
   </tr>
 </table>
-<p>
-  初公開：2019-1206
-</p>
-<p>
+<div class="hidden_div">
+  <input type="checkbox" id="check1"><label>詳細を表示する</label></input>
+  <div class="hidden_before">
+  <p>
+    初公開：2019-1206
+  </p>
   <table cellpadding=4>
     <tr colspan=3><td>お借りしたもの</td></tr>
     <tr><td align=right>3DModel<td>牛崎潤美<td>(｀・ω・)様
 　  <tr><td align=right>Motion<td>Scutellaria<td>reno様
   </table>
-</p>
+  <p>
+     初めて公開したMMEです。
+  </p>
+  <p>
+    (｀・ω・)氏の牛崎さんモデルをray-mmdで安易にレンダリングした画像をTwitterに上げてしまったのですが、どうにも満足がいかなかったので、
+満足いく静止画を作りたいと思ってikeno氏のikWaterColorをお借りして仕上げてみたのですが、ポストプロセスの枠組みがMMDにはあるのだと理解したため、
+自分でもポストプロセスを作ってみようという事で、静止画の仕上げ用途も兼ねて作成しました。
+  </p>
+  <p>
+    完成した静止画は、この作例ほど箔を押しまくってはいません(念のため)
+  </p>
+  </div>
+</div>
+
 
 <br><br>
 

@@ -96,6 +96,23 @@ a img {
 }
 
 
+/* 詳細段落用 */
+.hidden_div .hidden_before {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+}
+
+/*クリックで中身表示*/
+.hidden_div input:checked ~ .hidden_before {
+    padding-left:5%; padding-right:5%;
+    padding: 10px 0;
+    height: auto;
+    opacity: 1;
+}
+
 
 /* 書式いろいろ */
 /* 作品名を強調 */
