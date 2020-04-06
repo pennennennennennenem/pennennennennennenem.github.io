@@ -19,7 +19,7 @@ h4 {padding-left:5%; padding-right:5%}
 
 /* リンク */
 A:link    { text-decoration:underline; color:#479557 }
-A:visited { text-decoration:underline; color:#8888aa }
+A:visited { text-decoration:underline; color:#455795 }
 A:active  { text-decoration:underline; color:#47c757}
 A:hover   { text-decoration:none; color:#97b7a7}
 
