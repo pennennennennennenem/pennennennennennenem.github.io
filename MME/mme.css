@@ -30,7 +30,7 @@ body {
     color:#444455;
     line-height:150%;
     font-family:LucidaGrande, Meiryo, MS UI Gothic;
-    font-size:92%;
+    font-size:85%;
     padding-left:5%; padding-right:5%;
 }
 div {line-height:150%}
@@ -77,7 +77,7 @@ a img {
 }
 
 .thumb {
-	width: 256px; height: 144px;
+	height: 144px;
 	border-radius: 25px 25px 25px 25px;
 	-moz-border-radius: 25px 25px 25px 25px;
 	-webkit-border-radius: 25px 25px 25px 25px;
