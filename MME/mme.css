@@ -1,0 +1,59 @@
+﻿/* 2017-04より使用、Meiryo, フォントサイズ中, 白ベース 背景なし */
+
+b {font-family:Meiryo; font-weight:bold; font-size:middle}
+
+/* それともLicida ? */
+address {font-family:Menlo, Lucida Console,MS UI Gothic; font-style:normal; font-weight:normal; font-size:1em}
+em      {font-family:Menlo, Lucida Console,MS UI Gothic; font-style:normal; font-weight:normal; font-size:1em}
+
+
+/* 左右にインデント */
+/* p  {padding-left:24px; padding-right:24px} */
+
+/* 見出し */
+h1 {font-weight:normal; font-size:x-large; color:#808080; font-family:Menlo, Lucida Console, Meiryo,MS UI Gothic}
+h1.titleA {font-size: large; text-decoration: underline; color:#444455; font-family:LucidaGrande, Meiryo, MS UI Gothic; padding-top: 24px; padding-bottom: 24px}
+h2 {margin-left:2.5%; margin-right:2.5%; margin-top:32px; background-color:#bbc1c8; font-weight:normal}
+h3 {padding-left:5%; padding-right:5%; color:#dd8060}
+h4 {padding-left:5%; padding-right:5%}
+
+/* リンク */
+A:link    { text-decoration:underline; color:#479557 }
+A:visited { text-decoration:underline; color:#8888aa }
+A:active  { text-decoration:underline; color:#47c757}
+A:hover   { text-decoration:none; color:#97b7a7}
+
+/* インデントとか(独り言固有) */
+body {
+    background-repeat:repeat-y;
+    background-color:#dde3ec;
+    color:#444455;
+    line-height:150%;
+    font-family:LucidaGrande, Meiryo, MS UI Gothic;
+    font-size:92%;
+    padding-left:5%; padding-right:5%;
+}
+div {line-height:150%}
+p {line-height:150%; text-indent: 1em}
+ul {line-height:125%}
+ol {line-height:125%}
+table {line-height:125%; margin-left:5%; margin-right:5%}
+
+
+/* その他 */
+pre {font-family:menlo; font-size:90%; background:#ccd0c6; margin-left:5%; margin-right:5%; padding:16px 24px 16px 24px}
+hr {color:#808090; background-color:#a0a0b0; width:75%; height:2px; border:2px; border-style:dotted}
+
+
+
+/* 書式いろいろ */
+/* 作品名を強調 */
+.t {color:green}
+/* 固有名詞強調 */
+.s {color:royalblue}
+/* ポジティブな強調 */
+.p {color:coral}
+/* ネガティブな強調 */
+.n {color:red}
+/* AA張り用 */
+.AA {font-family: ＭＳ Ｐゴシック,YukarryAA; font-size:12pt; line-height:110%}
