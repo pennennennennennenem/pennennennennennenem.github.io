@@ -45,6 +45,57 @@ pre {font-family:menlo; font-size:90%; background:#ccd0c6; margin-left:5%; margi
 hr {color:#808090; background-color:#a0a0b0; width:75%; height:2px; border:2px; border-style:dotted}
 
 
+/* 画像用 */
+a img {
+  border-style:none;
+}
+.shadowimg {
+    box-shadow: 0 6px 25px 8px #999999;
+    -moz-box-shadow: 0 6px 25px 8px #999999;
+    -webkit-box-shadow: 0 6px 25px 8px #999999;
+    margin: 15px 35px 40px;
+}
+
+.roundimg_s{
+  border-radius: 11px 11px 11px 11px;
+  -moz-border-radius: 11px 11px 11px 11px;
+  -webkit-border-radius: 11px 11px 11px 11px;
+  box-shadow: 1px 4px 6px 1px #999999;
+  -moz-box-shadow: 1px 4px 6px 1px #999999;
+  -webkit-box-shadow: 1px 4px 6px 1px #999999;
+  margin: -5px 15px 1px 5px;
+}
+
+.roundimg {
+	border-radius: 25px 25px 25px 25px;
+	-moz-border-radius: 25px 25px 25px 25px;
+	-webkit-border-radius: 25px 25px 25px 25px;
+	box-shadow: 1px 4px 6px 1px #999999;
+	-moz-box-shadow: 1px 4px 6px 1px #999999;
+	-webkit-box-shadow: 1px 4px 6px 1px #999999;
+	margin: -5px 15px 1px 5px;
+}
+
+.thumb {
+	width: 256px; height: 144px;
+	border-radius: 25px 25px 25px 25px;
+	-moz-border-radius: 25px 25px 25px 25px;
+	-webkit-border-radius: 25px 25px 25px 25px;
+	box-shadow: 1px 4px 6px 1px #999999;
+	-moz-box-shadow: 1px 4px 6px 1px #999999;
+	-webkit-box-shadow: 1px 4px 6px 1px #999999;
+	margin: -5px 15px 1px 5px;
+}
+
+.roundborder {
+ padding: 10px;
+  border-radius: 10px 10px 10px 10px;
+ -webkit-border-radius: 10px;	/* Safari、Google Chrome */
+ -moz-border-radius: 10px;	/* Firefox */
+ background-color:rgba(255,255,255,0.5);
+}
+
+
 
 /* 書式いろいろ */
 /* 作品名を強調 */
@@ -57,3 +108,8 @@ hr {color:#808090; background-color:#a0a0b0; width:75%; height:2px; border:2px; 
 .n {color:red}
 /* AA張り用 */
 .AA {font-family: ＭＳ Ｐゴシック,YukarryAA; font-size:12pt; line-height:110%}
+/* エフェクトサムネイル説明用 */
+.d {font-size:x-small}
+/* エフェクト説明用 */
+.de {font-size:small}
+
