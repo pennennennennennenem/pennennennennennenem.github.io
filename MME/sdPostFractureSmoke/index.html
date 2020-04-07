@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head lang="ja">
+<meta charset="utf-8">
+<meta name="Description" content="MikuMikuEffect">
+<meta name="KeyWords"  content="MikuMikuEffect MMD MME MikuMikuDance HLSL">
+<title>sdPostFractureSmokeの使い方</title>
+<link  rel="stylesheet"  type="text/css"  href="../mme.css">
+</head>
+
+<body>
+
+<h1>sdPostFractureSmokeの使い方</h1>
+
+<p>
+  sdPostFractureSmokeはIoriKotatsu様による<a href="https://bowlroll.net/file/211554">scale.fx対応ray-mmd</a>(ray-mmdの原作者はRui様、scale.fxの原作者は針金P様)が対応している「連続面毎に分解エフェクト」(原作者はわたり様)に対して煙と光を付けるエフェクトです。
+</p>
+<p>
+  誰がどうやって作って配ってるモノなのかから既に混乱しそうですが、とりあえずステップバイステップで使えるようになるための手引を記しておきます。ray-mmdを挫折したという方もどうぞ！
+</p>
+
+<h2>前提条件</h2>
+<p>
+  とりあえず、以下ができない事には始まりませんので、ここまでは各自出来るようになっているという前提で進めていきます。
+</p>
+<p>
+  <ul>
+    <li>MMEのインストールされたMMDが使える状態になっている
+    <li>極北P氏の開発・配布されているPMXEditorが使える状態になっている
+  </ul>
+</p>
+
+<h2>手順</h2>
+<p>
+  手順を頭から箇条書きにするとこんな感じになります
+</p>
+<p>
+  <ol>
+    <li>"scale.fx対応ray-mmd"のダウンロード・インストール
+    <li>PMXEditorに"scale.fx対応ray-mmd"付属の「連続面毎の重心書き込みプラグイン」をインストールする
+    <li>sdPostFractureSmokeのインストール
+    <li>分解したいモデルの入手
+    <li>分解したいモデルをPMXEditorで上記プラグインを使って重心情報の書き込みをし、分解可能モデルを作る
+    <li>新規pmmファイルを作り、ray-mmdのセットアップと分解可能モデルをMMDに読み込む
+    <li>分解可能モデルにサンプル分解モーションを読み込んで、分解されるかテスト
+    <li>sdPostFractureSmoke.xをMMDに読み込む
+  </ol>
+  再生ボタンを押すと破片が光ったり煙が出たりするようになる！
+</p>
+<p>
+  大変に感じますが1,2,3は一回やればもうやらなくていいですし、ray-mmdを普段から使っている方にとっては増えてる手順は5,8,9だけですから、意外に簡単です。それでは順に参りましょう。
+</p>
+
+<h2>1."scale.fx対応ray-mmd"のダウンロード・インストール</h2>
+<p>
+　<a href="https://bowlroll.net/file/211554">scale.fx対応ray-mmd</a>のリンクをクリックして、BowlRollからIoriKomatsu氏の配布していらっしゃるアーカイブをダウンロードし、好きなフォルダに解凍しましょう。
+</p>
+<p>
+  以下、"C:\MMD\ray-mmd-scale-rev4"に解凍したとして話を進めていきますので、パス名は各自読み替えてください。以下の画像のようなフォルダ構成になります。
+</p>
+<p align="center">
+  <img src="g/1.png">
+</p>
+
+<h2>2.PMXEditorに"連続面毎の重心書き込みプラグイン"をインストールする</h2>
+<p>
+　このプラグインは、scale.fx対応ray-mmdに同梱されており、"C:\MMD\ray-mmd-scale-rev4\連続面毎に分解エフェクト\連続面毎の重心書き込みプラグイン"フォルダに入っています。
+</p>
+<p>
+  もう今ではほとんどの方が64bit版Windowsを使っていると思いますから64bit版OSを使っていることを前提に進めますが、連続面重心書き込みver2x64.dllをPMXEDitorの_plugin\Userフォルダにコピーします。
+</p>
+<p align="center">
+  <img src="g/2.png">
+</p>
+<p>
+  Windows10ではインターネットからダウンロードしてきたDLLは勝手に読み込めないようにされていますから、連続面重心書き込みver2x64.dllを右クリック→プロパティで「全般」タブの下にある「セキュリティ」の欄、「許可する」チェックをオンにしてください。この辺りはPMXEditorを使える方ならハマらないとは思いますが。
+</p>
+<p align="center">
+  <img src="g/3.png">
+</p>
+
+<h2>3.sdPostFractureSmokeのインストール</h2>
+<p>
+  readme.txtにも書いてありますが解凍してそのままの位置では多分sdPostFractureSmokeはエラーを出して動きません。C:\MMD\ray-mmd-scale-rev4\ray-mmd\Extension以下にフォルダを掘って入れましょう。こんな感じで。
+</p>
+<p align="center">
+  <img src="g/4.png">
+</p>
+<p>
+  ※なんでこんなことになっているのかというと、ray-mmd\shader\fracture.fxsubをsdPostFractureSmoke全体から参照しているためです。
+</p>
+
+<h2>4.分解したいモデルの入手</h2>
+<p>
+  これは建物でも人物の服でも好きなものを選んでください！今回は首振りP様の配布されている<a href="https://3d.nicovideo.jp/works/td67200">コロナウイルス</a>を例に説明を進めます。
+  ともかく、配布されている作者様による規約はよく読んで使用範囲は守ってね！
+</p>
+
+<h2>5.分解したいモデルをPMXEditorで上記プラグインを使って重心情報の書き込みをし、分解可能モデルを作る</h2>
+<p>
+  分解したいモデルに重心情報を書き込みます、とても簡単です。PMXEditorに分解したいモデルを読み込んだら、「編集」－「プラグイン」－「User」－「連続面重心書き込み」を選択します。モデルの面数によっては結構時間がかかるかもしれませんのでお待ちください。
+</p>
+<p align="center">
+  <img src="g/5.png">
+</p>
+<p>
+  書き込みが終わったら、コロナ_分解可能.pmxなどと適当に名前を変えて保存しましょう。
+  保存先フォルダは元々モデルのあったフォルダにしましょうね(テクスチャなどのデータは.pmxファイルに入っていないため、別フォルダに保存するとテクスチャが無くなります)
+</p>
+
+
+
+<h2>6.新規pmmファイルを作り、ray-mmdのセットアップ</h2>
+<p>
+  次に、MMDを起動して、ray-mmdを使える状態にします。ray-mmdを使ったことが無い方向けの内容も含まれていますが、ちょっとモデルの読み込みで普段と違う点もあるので読んでみてください。
+</p>
+
+<br>
+<p>
+  1.MMDを起動し、分解可能モデルを読み込む
+</p>
+<p align="center">
+  <img src="g/ray1.png">
+</p>
+
+<br>
+<p>
+  2.C:\MMD\ray-mmd-scale-rev4\ray-mmd\ray.xと、ray-controller.pmxを読み込む
+</p>
+<p align="center">
+  <img src="g/ray2.png">
+</p>
+
+<br>
+<p>
+  3.C:\MMD\ray-mmd-scale-rev4\ray-mmd\Skybox\Time of day\Time of day.pmxを読み込む
+</p>
+<p align="center">
+  <img src="g/ray3.png">
+</p>
+
+<br>
+<p>
+  4.MMEffectメニューの「エフェクト割り当て」ダイアログを出し、Mainタブの分解したいモデルを選択。"C:\MMD\ray-mmd-scale-rev4\ray-mmd\Main\main_fracture.fx"を指定。
+ray-mmdを普段使っている方への注意ですが、分解したいモデルに対して、このようにエフェクトファイル割り当ての各タブについて、デフォルトでセットされる.fxファイルではなく、_fracture付きのfxファイルを指定します。
+</p>
+<p align="center">
+  <img src="g/ray4.png">
+</p>
+
+<br>
+<p>
+  5.「エフェクト割り当て」ダイアログのFogMapタブでTime of day.pmxに"C:\MMD\ray-mmd-scale-rev4\ray-mmd\Skybox\Time of day\Time of fog with godray with cloud caster.fx"を指定
+※とにかく表示できればOK、軽くしたい！という場合はTime of fog.fxでもOKです。
+</p>
+<p align="center">
+  <img src="g/ray5.png">
+</p>
+
+<br>
+<p>
+  6.「エフェクト割り当て」ダイアログのEnvLightMapタブでTime of day.pmxに"C:\MMD\ray-mmd-scale-rev4\ray-mmd\Skybox\Time of day\Time of lighting.fx"を指定
+</p>
+<p align="center">
+  <img src="g/ray6.png">
+</p>
+
+<br>
+<p>
+  7.「エフェクト割り当て」ダイアログのMaterialMapタブでTime of day.pmxに"C:\MMD\ray-mmd-scale-rev4\ray-mmd\Skybox\Time of day\Time of lighting.fx"を指定
+</p>
+<p>
+  8.「エフェクト割り当て」ダイアログのMaterialMapタブで分解したいモデルに"C:\MMD\ray-mmd-scale-rev4\ray-mmd\Materials\material_2.0_fracture.fx"を指定
+</p>
+<p align="center">
+  <img src="g/ray7.png">
+</p>
+
+<br>
+<p>
+  9.「エフェクト割り当て」ダイアログのSSAOタブで分解したいモデルに"C:\MMD\ray-mmd-scale-rev4\ray-mmd\Shadow\SSAO visibility 1.0_fracture.fx"を指定
+</p>
+<p align="center">
+  <img src="g/ray8.png">
+</p>
+
+<br>
+<p>
+  10.「エフェクト割り当て」ダイアログのPSSM1～4タブに<b>それぞれ</b>分解したいモデルに"C:\MMD\ray-mmd-scale-rev4\ray-mmd\Shadow\PSSM1～4_fracture.fx"を指定
+</p>
+<p align="center">
+  <img src="g/ray9.png">
+</p>
+
+
+<h2>7.分解可能モデルにサンプル分解モーションを読み込んで、分解されるかテスト</h2>
+<p>
+  モデル操作パネルから分解したいモデルを選択したら、"D:\apl\MikuMikuDance\MME\ray-mmd-scale-rev4\連続面毎に分解エフェクト\サンプルモーション.vmd"というファイルがあるので、
+　フレーム操作パネルにドロップしましょう
+</p>
+<p align="center">
+  <img src="g/6.png">
+</p>
+<br>
+<p>
+  すぐ再生してもモーションが無いのであっという間に終わってしまいますから、再生パネルで終了フレームを適当に長くして(下の例では2000に指定しました)「再生」ボタンを押します。
+</p>
+<p align="center">
+  <img src="g/7.png">
+</p>
+<p>
+  かなり速く飛んで行ってしまうと思いますから、モデルの「エフェクト」－「衝撃速度」ボーンや「重力ベクトル」ボーンの数字をいじって調整した方がよいと思います。
+  モデルのサイズにもよりますが、コロナウイルスの場合、「衝撃速度」ボーンのX座標を0.05程度、「重力ベクトル」ボーンのY座標を-0.001程度にセットするとよいでしょう。
+ついでに、「崩壊速度」ボーンも0.05程度にして、全体がボコっと崩壊するよりも、1か所から崩壊が始まっている感じを出してみましょうか。
+ともかく、今回は煙を鑑賞したいのである程度ゆっくりした動きになったほうが見ごたえがあるはずです。
+</p>
+<p>
+  ※速度の単位は[MMD距離/フレーム]、重力の単位は[MMD距離/フレーム^2]になっています。1MMD距離(ミクメートル)は約8cmと言われていますから、現実の重力に近い感じにしたい場合は重力ベクトルは(0,-0.136,0)程度にするとよいでしょう。
+</p>
+
+<h2>8.sdPostFractureSmoke.xをMMDに読み込む</h2>
+<p>やっと最後まで来ました、あとは、さきほどC:\MMD\ray-mmd-scale-rev4\ray-mmd\Extension\sdPostFratcureSmoke以下に入れた、sdPostFractureSmoke.xと、sdPostFractureSmokeController.pmxをドロップするだけです。
+<p align="center">
+  <img src="g/8.png">
+</p>
+<br>
+<p>
+  さて、うまく煙と光が付きましたか？うまく行ったらそぼろ様 作のAutoLuminousを入れたり、他のポストエフェクトと組み合わせたり、パラメータをいろいろいじって遊んでみてください！
+</p>
+<p align="center">
+  <video src="g/sdpfs.mp4" controls>
+</p>
+<p>
+  お疲れさまでした！
+</p>
+
+<br>
+<hr>
+<br>
+<a href="../index.html">MMEまとめに戻る</a>
+
+</body>
+</html>
