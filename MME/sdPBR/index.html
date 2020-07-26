@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head lang="ja">
+<meta charset="utf-8">
+<meta name="Description" content="MikuMikuEffect">
+<meta name="KeyWords"  content="MikuMikuEffect MMD MME MikuMikuDance HLSL">
+<title>わくわくマテリアル</title>
+<link  rel="stylesheet"  type="text/css"  href="../mme.css">
+</head>
+
+<h1>sdPBRおたのしみマテリアル一覧</h1>
+
+<p>sdPBRのマテリアル一覧です。読み込みが長くてイライラするのに思ったのと違うマテリアルだと更にイライラすると思うので作ってみました。あんまりイライラするのがイヤな方はチュートリアルにも書いてありますが、使いそうなマテリアルを複数貼り付けたマテリアルキャッシュ的な物体を作っておくと良いです。2020年7月現在のMMD/MMEの仕様では、シーン内に既に読み込まれているエフェクトに対してはコンパイルの必要なく読み込まれます。</p>
+
+<h2>material/bg</h2>
+
+<table cellpadding=4>
+  <tr align="center">
+    <td><img src="g/drywood.png" class="mat"></a></td>
+    <td><img src="g/autonormal.png" class="mat"></a></td>
+    <td><img src="g/contrast.png" class="mat"></a></td>
+  </tr>
+  <tr align="center">
+    <td>drywood<br><font class="d">スペキュラを抑えてラフネスを高くした汎用マテリアルです</font></td>
+    <td>autonormal<br><font class="d">法線を輝度の傾きから自動生成してメリハリを付けます</font></td>
+    <td>contrast<br><font class="d">autonormal+AOで不自然なほどメリハリを付けます</font></td>
+  </tr>  
+</table>
+<p>基本的に背景を手抜き設定するためのマテリアルです。これで大体の雰囲気をつかんでから細かく仕上げていきましょう。</p>
+<p>床が白い気がする時はsdPBRのモーフ「環境色暗く」を上げた方が良いでしょう。contrastはどうしても黒い物体などにスペキュラの白さを載せたくない時のために用意してありますから、最初から全体に使わない方が良いと思います。</p>
+
+
+<h2>material/body</h2>
+
+<table cellpadding=4>
+  <tr align="center">
+    <td><img src="g/eye.png" class="mat"></a></td>
+    <td><img src="g/eye_tricky.png" class="mat"></a></td>
+  </tr>
+  <tr align="center">
+    <td>eye<br><font class="d">白目用。セルフシャドウ・SSDOの影響を受けづらいです</font></td>
+    <td>eye_tricky<br><font class="d">白目用の特徴＋陰の影響も受けづらくしてます<br>法線が反転しているなどトリックを施された白目にどうぞ</font></td>
+  </tr>
+　<tr><td>　</td></tr>
+  <tr align="center">
+    <td><img src="g/pupil.png" class="mat"></a></td>
+    <td><img src="g/pupil_darken.png" class="mat"></a></td>
+  </tr>
+  <tr align="center">
+    <td>pupil<br><font class="d">黒目用。セルフシャドウ・SSDOの影響を受けづらいです</font></td>
+    <td>pupil_darken<br><font class="d">黒目用。光源の具合で黒目が明るすぎると<br>白目を剥いたようになるのでそれの対策用</font></td>
+  </tr>  
+
+　<tr><td>　</td></tr>
+  <tr align="center">
+    <td><img src="g/skin.png" class="mat"></a></td>
+    <td><img src="g/skin2.png" class="mat"></a></td>
+    <td><img src="g/skin3.png" class="mat"></a></td>
+    <td><img src="g/skin4.png" class="mat"></a></td>
+  </tr>
+  <tr align="center">
+    <td>skin<br><font class="d">肌用</font></td>
+    <td>skin2<br><font class="d">テカりと赤みが強いです</font></td>
+    <td>skin3<br><font class="d">色が薄い乾燥肌です</font></td>
+    <td>skin4<br><font class="d">法線マップ無し、白い肌用</font></td>
+  </tr>  
+　<tr><td>　</td></tr>
+  <tr align="center">
+    <td><img src="g/skin5.png" class="mat"></a></td>
+    <td><img src="g/wetskin.png" class="mat"></a></td>
+    <td><img src="g/toonskin.png" class="mat"></a></td>
+    <td><img src="g/skinLatMiku.png" class="mat"></a></td>
+  </tr>
+  <tr align="center">
+    <td>skin5<br><font class="d">skinをベースにテカりをわずかに抑えました</font></td>
+    <td>wetskin<br><font class="d">潤いのある肌です</font></td>
+    <td>toonskin<br><font class="d">2値的な影を付けます</font></td>
+    <td>skinLatMiku<br><font class="d">ほぼLat式ミクさん用に開発された<br>シェーディングを放棄するシェーダです<br>baseColorとMMDのメイン光源の色だけが加味され<br>他の要素の影響を受けません</font></td>
+  </tr>  
+
+　<tr><td>　</td></tr>
+
+  <tr align="center">
+    <td><img src="g/hair.png" class="mat"></a></td>
+    <td><img src="g/hair2.png" class="mat"></a></td>
+    <td><img src="g/hair3.png" class="mat"></a></td>
+    <td><img src="g/hair4.png" class="mat"></a></td>
+  </tr>
+  <tr align="center">
+    <td>hair<br><font class="d">髪用</font></td>
+    <td>hair2<br><font class="d">光沢を強調した髪</font></td>
+    <td>hair3<br><font class="d">法線を強調したメリハリのある髪</font></td>
+    <td>hair4<br><font class="d">柔らかいサラサラヘアのつもり</font></td>
+  </tr>  
+</table>
+
+
+<h2>material/cloth</h2>
+<table cellpadding=4>
+  <tr align="center">
+    <td><img src="g/cloth1.png" class="mat"></a></td>
+    <td><img src="g/cloth2.png" class="mat"></a></td>
+    <td><img src="g/cloth3.png" class="mat"></a></td>
+    <td><img src="g/denim.png" class="mat"></a></td>
+  </tr>
+  <tr align="center">
+    <td>cloth1<br><font class="d">斜めに繊維の入った服</font></td>
+    <td>cloth2<br><font class="d">法線マップ無し光沢服</font></td>
+    <td>cloth3<br><font class="d">縦横に繊維の入った服</font></td>
+    <td>denim<br><font class="d">デニム生地風</font></td>
+  </tr>  
+　<tr><td>　</td></tr>
+  <tr align="center">
+    <td><img src="g/leather.png" class="mat"></a></td>
+    <td><img src="g/knit.png" class="mat"></a></td>
+    <td><img src="g/stocking.png" class="mat"></a></td>
+    <td><img src="g/wetcloth.png" class="mat"></a></td>
+  </tr>
+  <tr align="center">
+    <td>leather<br><font class="d">レザー風</font></td>
+    <td>knit<br><font class="d">ニット風</font></td>
+    <td>stocking<br><font class="d">ストッキング風</font></td>
+    <td>wetcloth<br><font class="d">潤いのある服</font></td>
+  </tr>  
+　<tr><td>　</td></tr>
+  <tr align="center">
+    <td><img src="g/cloth_cutout.png" class="mat"></a></td>
+  </tr>
+  <tr align="center">
+    <td>cloth_cutout<br><font class="d">ファーの部分に適用しています<br>α値が一定以下の部分を切り抜いて表示するマテリアルです</font></td>
+  </tr>
+</table>
+
+
+
+<h2>material/controllable</h2>
+<table cellpadding=4>
+  <tr align="center">
+    <td><img src="g/controllable.png" class="mat"></a></td>
+  </tr>
+  <tr align="center">
+    <td>controllable<br><font class="d">sdPBRMaterialController.pmxで制御できます</font></td>
+  </tr>  
+</table>
+
+
+
+<h2>material/etc</h2>
+
+<table cellpadding=4>
+  <tr align="center">
+    <td><img src="g/car.png" class="mat"></a></td>
+    <td><img src="g/clearcoat.png" class="mat"></a></td>
+    <td><img src="g/plastic.png" class="mat"></a></td>
+    <td><img src="g/wing.png" class="mat"></a></td>
+  </tr>
+  <tr align="center">
+    <td>car<br><font class="d">車のボンネット風</font></td>
+    <td>clearcoat<br><font class="d">クリアコート材質</font></td>
+    <td>plastic<br><font class="d">ツヤのあるプラスチック風</font></td>
+    <td>wing<br><font class="d">凹凸のある翼風</font></td>
+  </tr>
+　<tr><td>　</td></tr>
+  <tr align="center">
+    <td><img src="g/metal.png" class="mat"></a></td>
+    <td><img src="g/metal_mid.png" class="mat"></a></td>
+    <td><img src="g/metal_rough.png" class="mat"></a></td>
+  </tr>
+  <tr align="center">
+    <td>metal<br><font class="d">研磨された金属</font></td>
+    <td>metal_mid<br><font class="d">ちょっと手入れされた金属</font></td>
+    <td>metal_rough<br><font class="d">未研磨の金属</font></td>
+  </tr>
+　<tr><td>　</td></tr>
+  <tr align="center">
+    <td><img src="g/emissive.png" class="mat"></a></td>
+    <td><img src="g/emissiveX2.png" class="mat"></a></td>
+    <td><img src="g/emissiveX4.png" class="mat"></a></td>
+    <td><img src="g/emissiveX05.png" class="mat"></a></td>
+  </tr>
+  <tr align="center">
+    <td>emissive<br><font class="d">発光<br>baseColorと同じ強さの光が単純に加算されます</font></td>
+    <td>emissiveX2<br><font class="d">2倍発光</font></td>
+    <td>emissiveX4<br><font class="d">4倍発光</font></td>
+    <td>emissiveX05<br><font class="d">0.5倍発光</font></td>
+  </tr>
+</table>
+
+
+<h2>謝辞</h2>
+
+<p>口絵の作成に以下をお借りしました</p>
+<table cellpadding=4>
+<tr>
+  <td>和風ステージ(朱)</td><td>一護牛乳様</td>
+</tr>
+<tr>
+  <td>つみ式ミクさん</td><td>つみだんご様</td>
+</tr>
+<tr>
+  <td>ミクダヨー</td><td>すず様</td>
+</tr>
+<tr>
+  <td>天龍改二</td><td>(｀・ω・)様</td>
+</tr>
+</table>
+
+<p>誠にありがとうございました！</p>
+
+</body>
+</html>

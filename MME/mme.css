@@ -87,6 +87,17 @@ a img {
 	margin: -5px 15px 1px 5px;
 }
 
+.mat {
+	height: 256px;
+	border-radius: 25px 25px 25px 25px;
+	-moz-border-radius: 25px 25px 25px 25px;
+	-webkit-border-radius: 25px 25px 25px 25px;
+	box-shadow: 1px 4px 6px 1px #999999;
+	-moz-box-shadow: 1px 4px 6px 1px #999999;
+	-webkit-box-shadow: 1px 4px 6px 1px #999999;
+	margin: -5px 15px 1px 5px;
+}
+
 .roundborder {
  padding: 10px;
   border-radius: 10px 10px 10px 10px;
