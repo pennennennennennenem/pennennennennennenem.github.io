@@ -55,10 +55,14 @@
   <tr align="center">
     <td><img src="g/skinEX.png" class="mat"></a></td>
     <td><img src="g/wetskinEX.png" class="mat"></a></td>
+    <td><img src="g/skinEX2.png" class="mat"></a></td>
+    <td><img src="g/wetskinEX2.png" class="mat"></a></td>
   </tr>
   <tr align="center">
     <td>skinEX<br><font class="d">Version1.10より追加。よい肌用</font></td>
     <td>wetskinEX<br><font class="d">Version1.10より追加。潤いのある良いお肌用</font></td>
+    <td>skinEX2<br><font class="d">Version1.70より追加。張りのあるよい肌用</font></td>
+    <td>wetskinEX2<br><font class="d">Version1.70より追加。潤いと張りのある良いお肌用</font></td>
   </tr>  
   <tr align="center">
     <td><img src="g/skin.png" class="mat"></a></td>
@@ -134,11 +138,22 @@
   <tr align="center">
     <td><img src="g/lace.png" class="mat"></a></td>
     <td><img src="g/cloth_cutout.png" class="mat"></a></td>
+    <td><img src="g/felt.png" class="mat"></a></td>
+    <td><img src="g/leather_iri.png" class="mat"></a></td>
   </tr>
   <tr align="center">
     <td>lace<br><font class="d">レース。半透明部分が出来るので描画順に注意が必要です</font></td>
     <td>cloth_cutout<br><font class="d">ファーの部分に適用しています<br>α値が一定以下の部分を切り抜いて表示するマテリアルです</font></td>
+    <td>felt<br><font class="d">フェルト風</font></td>
+    <td>leather_iri<br><font class="d">レザー風<br>構造色を加味しています</font></td>
   </tr>
+  <tr align="center">
+    <td><img src="g/nylon.png" class="mat"></a></td>
+  </tr>
+  <tr align="center">
+    <td>nylon<br><font class="d">ナイロン風</font></td>
+  </tr>
+
 </table>
 
 
@@ -149,12 +164,14 @@
     <td><img src="g/controllable.png" class="mat"></a></td>
     <td><img src="g/controllablePreint.png" class="mat"></a></td>
     <td><img src="g/controllable_Iridescence.png" class="mat"></a></td>
+    <td><img src="g/controllable_AnisotropicFuzz.png" class="mat"></a></td>
   </tr>
   <tr align="center">
     <td>controllable<br><font class="d">sdPBRMaterialController.pmxで制御できます</font></td>
     <td>controllable_PreintegratedSkin<br><font class="d">sdPBRMaterialController_PreintegratedSkin.pmx<br>で制御できます<br>pre-integrated skin拡張シェーディングモデルを<br>使用したマテリアルを調整できます</font></td>
     <td>controllable_Iridescence<br><font class="d">sdPBRMaterialController_Iridescence.pmx<br>で制御できます<br>Iridescence拡張シェーディングモデルを<br>使用したマテリアルを調整できます</font></td>
-  </tr>  
+    <td>controllable_AnisotropicFuzz<br><font class="d">sdPBRMaterialController_AnisotropicFuzz.pmx<br>で制御できます  </tr>  
+<br>AnisotropicFuzz拡張シェーディングモデルを<br>使用したマテリアルを調整できます</font></td>
 </table>
 
 
@@ -166,24 +183,26 @@
     <td><img src="g/car.png" class="mat"></a></td>
     <td><img src="g/clearcoat.png" class="mat"></a></td>
     <td><img src="g/plastic.png" class="mat"></a></td>
-    <td><img src="g/wing.png" class="mat"></a></td>
+    <td><img src="g/plasticMid.png" class="mat"></a></td>
   </tr>
   <tr align="center">
     <td>car<br><font class="d">車のボンネット風</font></td>
     <td>clearcoat<br><font class="d">クリアコート材質</font></td>
-    <td>plastic<br><font class="d">ツヤのあるプラスチック風</font></td>
-    <td>wing<br><font class="d">凹凸のある翼風</font></td>
+    <td>plastic<br><font class="d">ツヤツヤなプラスチック風</font></td>
+    <td>plasticMid<br><font class="d">少しツヤのあるプラスチック風</font></td>
   </tr>
 　<tr><td>　</td></tr>
   <tr align="center">
     <td><img src="g/metal.png" class="mat"></a></td>
     <td><img src="g/metal_mid.png" class="mat"></a></td>
     <td><img src="g/metal_rough.png" class="mat"></a></td>
+    <td><img src="g/wing.png" class="mat"></a></td>
   </tr>
   <tr align="center">
     <td>metal<br><font class="d">研磨された金属</font></td>
     <td>metal_mid<br><font class="d">ちょっと手入れされた金属</font></td>
     <td>metal_rough<br><font class="d">未研磨の金属</font></td>
+    <td>wing<br><font class="d">凹凸のある翼風</font></td>
   </tr>
 　<tr><td>　</td></tr>
   <tr align="center">
@@ -201,10 +220,14 @@
   <tr align="center">
     <td><img src="g/iridescence.png" class="mat"></a></td>
     <td><img src="g/iridescence_blackMetal.png" class="mat"></a></td>
+    <td><img src="g/suyaki.png" class="mat"></a></td>
+    <td><img src="g/screen.png" class="mat"></a></td>
   </tr>
   <tr align="center">
     <td>iridescence<br><font class="d">構造色<br>金属酸化膜や油膜のように見る角度によって<br>色合いの変化を起こす膜に覆われた材質</font></td>
     <td>iridescence_blackMetal<br><font class="d">構造色のみ</font></td>
+    <td>suyaki<br><font class="d">素焼きの陶器風</font></td>
+    <td>screen<br><font class="d">MMDの画面取り込み機能<br>tool\sdScreenCaptor.xを必ず入れてください<br>スポットライト無効の設定では使えません</font></td>
   </tr>
 </table>
 
