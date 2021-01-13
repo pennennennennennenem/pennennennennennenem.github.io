@@ -24,6 +24,83 @@
 
 
 <h2>
+  <a href="https://github.com/pennennennennennenem/sdPBR/releases">物理ベースシェーダ sdPBR</a>
+  <font size="-1">配布動画は<a href="https://www.nicovideo.jp/watch/sm37243095">こちら</a></font>
+</h2>
+<table cellpadding=4>
+  <tr align="center">
+    <td><a href="g/PBR/sdPBR.png"><img src="g/PBR/sdPBR_s.png" class="thumb"></a></td>
+  </tr>
+  <tr align="center">
+    <td>sdPBR<br><font class="d">PBRの考えに則ってモデル・アクセサリを描きます</font></td>
+  </tr>
+
+  <tr><td colspan=4><h3>※以下、付属のポストエフェクトは基本的にsdPBRと併用せず単品でも使えます</h3></td></tr>
+
+  <tr align="center">
+    <td><a href="g/PBR/sdToneMapper.jpg"><img src="g/PBR/sdToneMapper_s.jpg" class="thumb"></a></td>
+    <td><a href="g/PBR/sdEyeAdaptation.jpg"><img src="g/PBR/sdEyeAdaptation_s.jpg" class="thumb"></a></td>
+    <td><a href="g/PBR/sdSSR.jpg"><img src="g/PBR/sdSSR_s.jpg" class="thumb"></a></td>
+    <td><a href="g/PBR/sdUnsharpMask.jpg"><img src="g/PBR/sdUnsharpMask_s.jpg" class="thumb"></a></td>
+  </tr>
+  <tr align="center" valign="top">
+    <td>sdToneMapper<br><font class="d">HDRでレンダリングした絵をSDRの範囲に納めます<br>絵が引き締まります</font></td>
+    <td>sdEyeAdaptation<br><font class="d">画面の内容に合わせて全体的な輝度を補正します</font></td>
+    <td>sdSSR<br><font class="d">疑似的な映り込みの表現を行います</font></td>
+    <td>sdUnsharpMask<br><font class="d">画像の先鋭化を行います</font></td>
+  </tr>
+
+  <tr align="center">
+    <td><a href="g/PBR/sdSSGI.jpg"><img src="g/PBR/sdSSGI_s.jpg" class="thumb"></a></td>
+    <td><a href="g/PBR/sdFXAA.jpg"><img src="g/PBR/sdFXAA_s.jpg" class="thumb"></a></td>
+    <td><a href="g/PBR/sdChromaBlur.jpg"><img src="g/PBR/sdChromaBlur_s.jpg" class="thumb"></a></td>
+    <td><a href="g/PBR/sdDiffusion.jpg"><img src="g/PBR/sdDiffusion_s.jpg" class="thumb"></a></td>
+  </tr>
+  <tr align="center" valign="top">
+    <td>sdSSGI<br><font class="d">光が間接的に拡がる表現を近似的に行います</font></td>
+    <td>sdFXAA<br><font class="d">アンチエイリアシングを施しジャギーを低減します</font></td>
+    <td>sdChromaBlur<br><font class="d">色ズレを含んだモーションブラー風の表現をします</font></td>
+    <td>sdDiffusion<br><font class="d">カメラのディフュージョンフィルタを模した光の拡散を表現します</font></td>
+  </tr>
+
+  <tr align="center">
+    <td><a href="g/PBR/sdCrossFilter.jpg"><img src="g/PBR/sdCrossFilter_s.jpg" class="thumb"></a></td>
+    <td><a href="g/PBR/sdHistogram.jpg"><img src="g/PBR/sdHistogram_s.jpg" class="thumb"></a></td>
+    <td><a href="g/PBR/sdColorGrading.jpg"><img src="g/PBR/sdColorGrading_s.jpg" class="thumb"></a></td>
+  </tr>
+  <tr align="center" valign="top">
+    <td>sdCrossFilter<br><font class="d">カメラのクロスフィルタを模した光芒の表現をします</font></td>
+    <td>sdHistogram<br><font class="d">現在表示されている色の統計情報を表示します</font></td>
+    <td>sdColorGradingSDR<br><font class="d">カラーグレーディング(全体的な色調の操作)を行います</font></td>
+  </tr>
+
+</table>
+
+<div class="hidden_div">
+  <input type="checkbox" id="check1"><label>詳細を表示する</label></input>
+  <div class="hidden_before">
+     <p>
+      初公開：2020-0725
+    </p>
+    <p>
+      MMDのオブジェクトを描くためのいわゆる「普通のシェーダ」です。暁編の副産物としてPBRの知識が手に入ったので簡単にシェーダを作ってみたのですが意外と雰囲気が良いので、ライトも増やしたい、シャドウマップも…と際限なくコードを増やしていった結果がこれだよ！
+    </p>
+    <p>付属マテリアルの種類が多いので一覧を作ってみました<a href="sdPBR/index.html"><font size=+2>こちら</font></a>です</p>
+    <table cellpadding=4>
+      <tr colspan=3><td>お借りしたもの</td></tr>
+      <tr><td align=right>3DModel<td>天龍改二・龍田改二・大淀改・明石改<td>(｀・ω・)様
+      <tr><td align=right>Pose<td>指ポーズ96種v1.01<td>のべ男様
+      <tr><td align=right><td>ノリノリダンス<td>Plover様
+      <tr><td align=right>BG<td>モブ超弩級戦艦1944(ﾓﾌﾞｻｽ)セット<td>Tansoku102cm様
+    </table>
+  </div>
+</div>
+
+
+<br>
+
+
+<h2>
   <a href="https://github.com/pennennennennennenem/sdHoliday/releases">うごくMME -休日編-</a>
   <font size="-1">配布動画は<a href="https://www.nicovideo.jp/watch/sm38027538">こちら</a></font>
 </h2>
@@ -59,37 +136,6 @@
     <p>
       sdKoppeitaは、関節などの位置を表示するためのツール的なMMEです。モーショントレース等の際のお供にどうぞ
     </p>
-  </div>
-</div>
-
-
-
-<h2>
-  <a href="https://github.com/pennennennennennenem/sdPBR/releases">物理ベースシェーダ sdPBR</a>
-  <font size="-1">配布動画は<a href="https://www.nicovideo.jp/watch/sm37243095">こちら</a></font>
-</h2>
-<table cellpadding=4>
-  <tr align="center">
-    <td><a href="g/PBR/sdPBR.png"><img src="g/PBR/sdPBR_s.png" class="thumb"></a></td>
-  </tr>
-</table>
-
-<div class="hidden_div">
-  <input type="checkbox" id="check1"><label>詳細を表示する</label></input>
-  <div class="hidden_before">
-     <p>
-      初公開：2020-0725
-    </p>
-    <p>
-      MMDのオブジェクトを描くためのいわゆる「普通のシェーダ」です。暁編の副産物としてPBRの知識が手に入ったので簡単にシェーダを作ってみたのですが意外と雰囲気が良いので、ライトも増やしたい、シャドウマップも…と際限なくコードを増やしていった結果がこれだよ！
-    </p>
-    <p>付属マテリアルの種類が多いので一覧を作ってみました<a href="sdPBR/index.html"><font size=+2>こちら</font></a>です</p>
-    <table cellpadding=4>
-      <tr colspan=3><td>お借りしたもの</td></tr>
-      <tr><td align=right>3DModel<td>天龍改二・龍田改二・大淀改・明石改<td>(｀・ω・)様
-      <tr><td align=right>Pose<td>指ポーズ96種v1.01<td>のべ男様
-      <tr><td align=right>BG<td>モブ超弩級戦艦1944(ﾓﾌﾞｻｽ)セット<td>Tansoku102cm様
-    </table>
   </div>
 </div>
 
