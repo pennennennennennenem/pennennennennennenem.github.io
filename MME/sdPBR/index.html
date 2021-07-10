@@ -18,16 +18,27 @@
   <tr align="center">
     <td><img src="g/drywood.png" class="mat"></a></td>
     <td><img src="g/autonormal.png" class="mat"></a></td>
+    <td><img src="g/autonormal_mid.png" class="mat"></a></td>
+    <td><img src="g/autonormal_smooth.png" class="mat"></a></td>
+  </tr>
+  <tr align="center">
+    <td>drywood<br><font class="d">ツヤ無し汎用マテリアルです</font></td>
+    <td>autonormal<br><font class="d">法線を輝度の傾きから自動生成してメリハリを付けます</font></td>
+    <td>autonormal_mid<br><font class="d">autonormalのroughness0.5版です</font></td>
+    <td>autonormal_smooth<br><font class="d">autonormalのroughness0版です</font></td>
+  </tr>
+  <tr><td>　</td></tr>
+  <tr align="center">
+    <td><img src="g/autonormal_metal.png" class="mat"></a></td>
     <td><img src="g/contrast.png" class="mat"></a></td>
   </tr>
   <tr align="center">
-    <td>drywood<br><font class="d">スペキュラを抑えてラフネスを高くした汎用マテリアルです</font></td>
-    <td>autonormal<br><font class="d">法線を輝度の傾きから自動生成してメリハリを付けます</font></td>
+    <td>autonormal_metal<br><font class="d">autonormalのroughness0,金属版です</font></td>
     <td>contrast<br><font class="d">autonormal+AOで不自然なほどメリハリを付けます</font></td>
   </tr>  
 </table>
 <p>基本的に背景を手抜き設定するためのマテリアルです。これで大体の雰囲気をつかんでから細かく仕上げていきましょう。</p>
-<p>床が白い気がする時はsdPBRのモーフ「環境色暗く」を上げた方が良いでしょう。contrastは黒い物体などにどうしてもスペキュラの白さを載せたくない時のために用意してありますから、最初から全体に使わない方が良いと思います。</p>
+<p>床が白い気がする時はsdPBRのモーフ「環境色暗く」を上げた方が良いでしょう。</p>
 
 
 <h2>material/body</h2>
@@ -63,6 +74,16 @@
     <td>wetskinEX<br><font class="d">Version1.10より追加。潤いのある良いお肌用</font></td>
     <td>skinEX2<br><font class="d">Version1.70より追加。張りのあるよい肌用</font></td>
     <td>wetskinEX2<br><font class="d">Version1.70より追加。潤いと張りのある良いお肌用</font></td>
+  </tr>  
+  <tr align="center">
+    <td><img src="g/skinEX3.png" class="mat"></a></td>
+    <td><img src="g/cosmetics_oshiroi.png" class="mat"></a></td>
+    <td><img src="g/cosmetics_maro.png" class="mat"></a></td>
+  </tr>  
+  <tr align="center">
+    <td>skinEX3<br><font class="d">Version3.10より追加。中身詰まってる感のあるよい肌用</font></td>
+    <td>cosmetics_oshiroi<br><font class="d">白粉化粧をしたような肌</font></td>
+    <td>cosmetics_maro<br><font class="d">お公家様のような化粧肌</font></td>
   </tr>  
   <tr align="center">
     <td><img src="g/skin.png" class="mat"></a></td>
@@ -104,6 +125,14 @@
     <td>hair3<br><font class="d">法線を強調したメリハリのある髪</font></td>
     <td>hair4<br><font class="d">柔らかいサラサラヘアのつもり</font></td>
   </tr>  
+  <tr align="center">
+    <td><img src="g/hairEX.png" class="mat"></a></td>
+    <td><img src="g/hairEX2.png" class="mat"></a></td>
+  </tr>
+  <tr align="center">
+    <td>hairEX<br><font class="d">光沢の強いサラサラ髪</font></td>
+    <td>hairEX2<br><font class="d">光沢を抑えたサラサラ髪</font></td>
+  </tr>
 </table>
 
 
@@ -170,7 +199,14 @@
     <td>controllable<br><font class="d">sdPBRMaterialController.pmxで制御できます</font></td>
     <td>controllable_PreintegratedSkin<br><font class="d">sdPBRMaterialController_PreintegratedSkin.pmx<br>で制御できます<br>pre-integrated skin拡張シェーディングモデルを<br>使用したマテリアルを調整できます</font></td>
     <td>controllable_Iridescence<br><font class="d">sdPBRMaterialController_Iridescence.pmx<br>で制御できます<br>Iridescence拡張シェーディングモデルを<br>使用したマテリアルを調整できます</font></td>
-    <td>controllable_AnisotropicFuzz<br><font class="d">sdPBRMaterialController_AnisotropicFuzz.pmx<br>で制御できます  </tr>  
+    <td>controllable_AnisotropicFuzz<br><font class="d">sdPBRMaterialController_AnisotropicFuzz.pmx<br>で制御できます
+  </tr>  
+  <tr align="center">
+    <td><img src="g/controllable_cosmetics.png" class="mat"></a></td>
+  </tr>
+  <tr align="center">
+    <td>controllable_cosmetics<br><font class="d">sdPBRMaterialController_cosmetics.pmxで制御できます</font></td>
+  </tr>  
 <br>AnisotropicFuzz拡張シェーディングモデルを<br>使用したマテリアルを調整できます</font></td>
 </table>
 
@@ -228,6 +264,34 @@
     <td>iridescence_blackMetal<br><font class="d">構造色のみ</font></td>
     <td>suyaki<br><font class="d">素焼きの陶器風</font></td>
     <td>screen<br><font class="d">MMDの画面取り込み機能<br>tool\sdScreenCaptor.xを必ず入れてください<br>スポットライト無効の設定では使えません</font></td>
+  </tr>
+  <tr align="center">
+    <td><img src="g/animdrop.png" class="mat"></a></td>
+    <td><img src="g/animdropGlass.png" class="mat"></a></td>
+    <td><img src="g/animdropGroundGlass.png" class="mat"></a></td>
+  </tr>
+  <tr align="center">
+    <td>animdrop<br><font class="d">アニメーション水滴</font></td>
+    <td>animdropGlass<br><font class="d">アニメーション水滴 ガラス用</font></td>
+    <td>animdropGroundGlass<br><font class="d">アニメーション水滴 すりガラス用</font></td>
+  </tr>
+  <tr align="center">
+    <td><img src="g/cookie.png" class="mat"></a></td>
+    <td><img src="g/powder.png" class="mat"></a></td>
+  </tr>
+  <tr align="center">
+    <td>cookie<br><font class="d">焼き菓子用</font></td>
+    <td>powder<br><font class="d">粉用</font></td>
+  </tr>
+  <tr align="center">
+    <td><img src="g/toonMid.png" class="mat"></a></td>
+    <td><img src="g/toonRough.png" class="mat"></a></td>
+    <td><img src="g/toonSmooth.png" class="mat"></a></td>
+  </tr>
+  <tr align="center">
+    <td>toonMid<br><font class="d">トゥーン調汎用</font></td>
+    <td>toonRough<br><font class="d">トゥーン調ツヤなし</font></td>
+    <td>toonSmooth<br><font class="d">トゥーン調ツヤ強め</font></td>
   </tr>
 </table>
 
